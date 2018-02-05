@@ -52,10 +52,5 @@ return [
 ];
 ```
 
-## Azure Active Directory OAuth Roadmap
 
-Some things to do, and ideas for potential features:
-
-* Release it
-
-Brought to you by [Jinzhe Li] from Simple Integrated Marketing(https://simple.com.au)
+Brought to you by [Simple Integrated Marketing](https://simple.com.au)
