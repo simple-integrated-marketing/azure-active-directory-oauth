@@ -15,12 +15,21 @@ To install the plugin, follow these instructions.
 1. Open your terminal and go to your Craft project:
 
         cd /path/to/project
+        
+2. Add Github repo to your `composer.json`
 
-2. Then tell Composer to load the plugin:
+        "repositories": [
+            {
+              "type":"git",
+              "url":"https://github.com/simple-integrated-marketing/azure-active-directory-oauth.git"
+            }
+        ]
 
-        composer require /azure-active-directory-oauth
+3. Then tell Composer to load the plugin:
 
-3. In the Control Panel, go to Settings → Plugins and click the “Install” button for Azure Active Directory OAuth.
+        composer require "simpleteam/azure-active-directory-oauth:dev-master"
+
+4. In the Control Panel, go to Settings → Plugins and click the “Install” button for Azure Active Directory OAuth.
 
 ## Azure Active Directory OAuth Overview
 
