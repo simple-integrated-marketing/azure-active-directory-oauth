@@ -22,7 +22,7 @@ class AzureActiveDirectory extends LoginProvider
     /**
      * @inheritdoc
      */
-    public function oauthVersion()
+    public function oauthVersion(): int
     {
         return 2;
     }
@@ -84,7 +84,7 @@ class AzureActiveDirectory extends LoginProvider
      *      Azure AD doesn't support redirect_uri with query string - so we need to encode query in the base url
      * @return string
      */
-    public function getRedirectUri()
+    public function getRedirectUri(): string
     {
         $url = SocialHelper::siteActionUrl('social/login-accounts/callback');
         $parsedUrl = parse_url($url);
