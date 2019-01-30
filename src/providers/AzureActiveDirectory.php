@@ -76,7 +76,9 @@ class AzureActiveDirectory extends LoginProvider
      */
     protected function getRemoteProfile(Token $token)
     {
-        return $this->getOauthProvider()->get("me",$token->token);
+        $provider = $this->getOauthProvider();
+        $provider->tenant = "myorganization";
+        return $provider->get("me",$token->token);
     }
 
     /**
