@@ -78,14 +78,21 @@ class AzureActiveDirectoryOauth extends Plugin
                 }
             }
         );
-
         Event::on(
-            LoginProviders::class,
-            LoginProviders::EVENT_REGISTER_LOGIN_PROVIDER_TYPES,
-            function(RegisterLoginProviderTypesEvent $event) {
-                $event->loginProviderTypes[] = "simpleteam\azureactivedirectoryoauth\providers\AzureActiveDirectory";
+            Plugins::class,
+            Plugins::EVENT_BEFORE_LOAD_PLUGINS,
+            function(Event $event) {
+                Event::on(
+                    LoginProviders::class,
+                    LoginProviders::EVENT_REGISTER_LOGIN_PROVIDER_TYPES,
+                    function(RegisterLoginProviderTypesEvent $event) {
+                        $event->loginProviderTypes[] = "simpleteam\azureactivedirectoryoauth\providers\AzureActiveDirectory";
+                    }
+                );
             }
         );
+
+
 
 /**
  * Logging in Craft involves using one of the following methods:
