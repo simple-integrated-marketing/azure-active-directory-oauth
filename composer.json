@@ -2,7 +2,6 @@
     "name": "simpleteam/azure-active-directory-oauth",
     "description": "This is an OAuth provider for Azure Active Directory. It is supposed to be used with Social plugin from Dukt",
     "type": "craft-plugin",
-    "version": "0.0.2",
     "keywords": [
         "craft",
         "cms",
