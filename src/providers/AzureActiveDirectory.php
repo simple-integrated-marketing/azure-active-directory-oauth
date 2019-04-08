@@ -103,4 +103,9 @@ class AzureActiveDirectory extends LoginProvider
     {
         return "http://svgshare.com/i/40a.svg";
     }
+
+    public function getDefaultUserFieldMapping()
+    {
+        return [];
+    }
 }
