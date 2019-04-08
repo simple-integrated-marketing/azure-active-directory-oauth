@@ -57,7 +57,7 @@ class AzureActiveDirectory extends LoginProvider
      *
      * @return \League\OAuth1\Client\Server\Twitter
      */
-    protected function getOauthProvider()
+    public function getOauthProvider()
     {
         $providerInfos = $this->getInfos();
 
