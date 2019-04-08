@@ -41,7 +41,6 @@ class AzureActiveDirectory extends LoginProvider
     public function getProfile(Token $token)
     {
         $remoteProfile = $this->getRemoteProfile($token);
-
         return [
             'id' => isset($remoteProfile['objectId'])?$remoteProfile['objectId']:null,
             'email' => isset($remoteProfile['userPrincipalName'])?$remoteProfile['userPrincipalName']:null,
@@ -62,11 +61,10 @@ class AzureActiveDirectory extends LoginProvider
         $providerInfos = $this->getOauthProviderConfig();
 
         $config = [
-            'clientId' => (isset($providerInfos['clientId']) ? $providerInfos['clientId'] : ''),
-            'clientSecret' => (isset($providerInfos['clientSecret']) ? $providerInfos['clientSecret'] : ''),
+            'clientId' => (isset($providerInfos['options']['clientId']) ? $providerInfos['options']['clientId'] : ''),
+            'clientSecret' => (isset($providerInfos['options']['clientSecret']) ? $providerInfos['options']['clientSecret'] : ''),
             'redirectUri' => $this->getRedirectUri(),
         ];
-
 
         return new \TheNetworg\OAuth2\Client\Provider\Azure($config);
     }
