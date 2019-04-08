@@ -59,7 +59,7 @@ class AzureActiveDirectory extends LoginProvider
      */
     public function getOauthProvider()
     {
-        $providerInfos = $this->getInfos();
+        $providerInfos = $this->getOauthProviderConfig();
 
         $config = [
             'clientId' => (isset($providerInfos['clientId']) ? $providerInfos['clientId'] : ''),
