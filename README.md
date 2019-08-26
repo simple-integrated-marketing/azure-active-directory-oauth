@@ -45,16 +45,22 @@ You will need to config the provider the same way you do with some native provid
 <?php
 
 return [
-    'allowEmailMatch' => false,
+    'allowEmailMatch' => true,
     'lockDomains' => [],
+    'enableCpLogin' => true,
     'loginProviders' => [
         "azureactivedirectory" => [
-            "clientId" => "APPLICATION ID",
-            "clientSecret" => "PRIVATE KEY",
-            'userMapping' => [
-                'email'=>"{{ mail }}",
-                'username'=>"{{ mail }}",
-                'firstName'=> "{{ givenName }}"
+            "oauth" => [
+                'options' => [
+                    "clientId" => "CLIENT_ID",
+                    "clientSecret" => "CLIENT_SECRET",
+                ]
+            ],
+            'userFieldMapping' => [
+                'id' => "{{ profile.id }}",
+                'email'=>"{{ profile.mail }}",
+                'username'=>"{{ profile.mail }}",
+                'firstName'=> "{{ profile.givenName }}"
             ],
         ]
     ]
