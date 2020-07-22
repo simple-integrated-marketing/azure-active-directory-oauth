@@ -45,6 +45,7 @@ class AzureActiveDirectory extends LoginProvider
             'id' => isset($remoteProfile['objectId'])?$remoteProfile['objectId']:null,
             'email' => isset($remoteProfile['userPrincipalName'])?$remoteProfile['userPrincipalName']:null,
             'givenName' => isset($remoteProfile['givenName'])?$remoteProfile['givenName']:null,
+            'full' => $remoteProfile,
         ];
     }
 
