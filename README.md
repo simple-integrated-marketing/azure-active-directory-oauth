@@ -58,8 +58,8 @@ return [
             ],
             'userFieldMapping' => [
                 'id' => "{{ profile.id }}",
-                'email'=>"{{ profile.mail }}",
-                'username'=>"{{ profile.mail }}",
+                'email'=>"{{ profile.email }}",
+                'username'=>"{{ profile.email }}",
                 'firstName'=> "{{ profile.givenName }}"
             ],
         ]
