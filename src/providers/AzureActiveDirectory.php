@@ -2,6 +2,7 @@
 
 namespace simpleteam\azureactivedirectoryoauth\providers;
 
+use Craft;
 use dukt\social\base\LoginProvider;
 use dukt\social\models\Token;
 use dukt\social\helpers\SocialHelper;
@@ -100,7 +101,7 @@ class AzureActiveDirectory extends LoginProvider
 
     public function getIconUrl()
     {
-        return "http://svgshare.com/i/40a.svg";
+        return Craft::$app->assetManager->getPublishedUrl('@simpleteam/azureactivedirectoryoauth/icon.svg', true);
     }
 
     public function getDefaultUserFieldMapping(): array
