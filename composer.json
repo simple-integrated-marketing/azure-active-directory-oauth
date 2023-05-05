@@ -24,7 +24,7 @@
         "php": "^7.2.5|^8.0",
         "craftcms/cms": "^3.0.20 | ^4.0",
         "thenetworg/oauth2-azure": "^2.0",
-        "dukt/social": "^2.0"
+        "dukt/social": "^2.0 | ^3.0.0-beta.1"
     },
     "repositories": [
         {
