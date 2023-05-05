@@ -21,8 +21,10 @@
         }
     ],
     "require": {
-        "craftcms/cms": "^3.0.20",
-        "thenetworg/oauth2-azure": "^2.0"
+        "php": "^7.2.5|^8.0",
+        "craftcms/cms": "^3.0.20 | ^4.0",
+        "thenetworg/oauth2-azure": "^2.0",
+        "dukt/social": "^2.0"
     },
     "repositories": [
         {
@@ -32,7 +34,7 @@
     ],
     "autoload": {
         "psr-4": {
-          "simpleteam\\azureactivedirectoryoauth\\": "src/"
+            "simpleteam\\azureactivedirectoryoauth\\": "src/"
         }
     },
     "extra": {
@@ -43,5 +45,17 @@
         "hasCpSection": false,
         "changelogUrl": "",
         "class": "simpleteam\\azureactivedirectoryoauth\\AzureActiveDirectoryOauth"
+    },
+    "config": {
+        "allow-plugins": {
+            "yiisoft/yii2-composer": true,
+            "craftcms/plugin-installer": true
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require-dev": {
+        "craftcms/phpstan": "dev-main",
+        "craftcms/rector": "dev-main"
     }
 }
